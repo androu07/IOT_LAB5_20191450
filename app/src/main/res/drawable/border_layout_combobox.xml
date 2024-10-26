@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Define el color y grosor del borde -->
+    <stroke
+        android:width="2dp"
+        android:color="#000000" /> <!-- Color del borde (negro) -->
+
+    <!-- Define el color de fondo, si lo deseas -->
+    <solid android:color="#FFFFFF" /> <!-- Color de fondo (blanco) -->
+
+    <!-- Define el radio de las esquinas del borde -->
+    <corners android:radius="8dp" /> <!-- Esquinas redondeadas -->
+
+    <!-- Define el padding interno, si lo necesitas -->
+    <padding
+        android:left="4dp"
+        android:top="4dp"
+        android:right="4dp"
+        android:bottom="4dp" />
+</shape>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InicioActivity">
+
+    <Button
+        android:id="@+id/buttonCerrarSesion"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:textSize="10sp"
+        android:text="Cerrar Sesion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonVerResumen"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:textSize="10sp"
+        android:text="Resumen de Comidas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido a TeleFit"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textInfo"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="INFORMACION"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/textCaloriasDiarias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALORIAS DIARIAS"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInfo" />
+
+    <TextView
+        android:id="@+id/textCaloriasConsumidas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALORIAS CONSUMIDAS"
+        android:layout_marginTop="5dp"
+        android:textSize="22sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCaloriasDiarias" />
+
+    <TextView
+        android:id="@+id/textCaloriasRestantes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALORIAS RESTANTES"
+        android:layout_marginTop="5dp"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCaloriasConsumidas" />
+
+    <ScrollView
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/border_scrollview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCaloriasConsumidas">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textTipoDeComida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COMIDA INGERIDA"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(ingresar comida y calorias de la misma)"
+                android:textStyle="italic"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextComidaNombre"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_edit_text"
+                    android:inputType="textMultiLine"
+                    android:layout_marginEnd="10dp"
+                    android:maxLength="20"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextComidaCalorias"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_edit_text"
+                    android:inputType="number"
+                    android:layout_marginEnd="10dp"
+                    android:maxLength="4"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/buttonAgregarComida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:textSize="10sp"
+                    android:text="Agregar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="EJERCICIO ADICIONAL"
+                android:layout_marginTop="30dp"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(ingresar ejercicio y calorias quemadas)"
+                android:textStyle="italic"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextEjercicioNombre"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_edit_text"
+                    android:inputType="textMultiLine"
+                    android:layout_marginEnd="10dp"
+                    android:maxLength="20"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextEjercicioCalorias"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_edit_text"
+                    android:inputType="number"
+                    android:layout_marginEnd="10dp"
+                    android:maxLength="4"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/buttonAgregarEjercicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:textSize="10sp"
+                    android:text="Agregar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

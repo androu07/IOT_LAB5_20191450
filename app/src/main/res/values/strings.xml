@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">lab5</string>
+
+    <string-array name="lista_genero">
+        <item>-Seleccionar-</item>
+        <item>Femenino</item>
+        <item>Masculino</item>
+    </string-array>
+
+    <string-array name="lista_nivel_actividad_fisica">
+        <item>-Seleccionar-</item>
+        <item>Poca</item>
+        <item>Ejercicio ligera</item>
+        <item>Ejercicio moderado</item>
+        <item>Ejercicio fuerte</item>
+        <item>Ejercicio muy fuerte</item>
+    </string-array>
+
+    <string-array name="lista_objetivos">
+        <item>-Seleccionar-</item>
+        <item>Subir de peso</item>
+        <item>Mantener de peso</item>
+        <item>Bajar de peso</item>
+    </string-array>
+</resources>
